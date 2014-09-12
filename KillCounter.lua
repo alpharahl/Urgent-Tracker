@@ -955,9 +955,19 @@ function  KC_G.RevengeKill(eventCode, killedPlayer)
 end
 
 function KC_G.MemberChange(GuildID, PlayerName, prevStatus, curStatus)
-	d("Guild: " .. GetGuildName(GetGuildId(GuildID)))
-	d("Player" .. PlayerName)
-	d("Status" .. curStatus)
+	d(GuildID)
+	-- resp = GetGuildMemberInfo(PlayerName,GuildID)
+	resp = GetPlayerGuildMemberIndex(GuildID)
+	d(resp)
+	charName = zo_strformat(SI_UNIT_NAME,charName)
+	if (curStatus == 4) then
+		d(charName .. "Logged Off in Guild: " .. GetGuildName(PlayerName))
+	elseif (curStatus == 1) then
+		d(charName .. "Logged On in Guild: " .. GetGuildName(PlayerName))
+	end
+	-- d("Guild: " .. GetGuildName(GetGuildId(GuildID)))
+	-- d("Player" .. PlayerName)
+	-- d("Status" .. curStatus)
 
 	-- d("Guild Member Update " .. guildID .. displayName)
 end
