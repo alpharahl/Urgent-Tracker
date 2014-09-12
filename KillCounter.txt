@@ -1,0 +1,11 @@
+## Title: Kill Counter
+## APIVersion: 100008
+## SavedVariables: KillCounter_Data
+
+lib/function.lua
+keepcounter.lua
+KillCounter.lua
+lib/gui.lua
+KillCounter.xml
+xml/virtual.xml
+xml/settings.xml
